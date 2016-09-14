@@ -13,6 +13,7 @@
 		70EFEF091D8912F500BB3A1D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFEF081D8912F500BB3A1D /* Post.swift */; };
 		70EFEF0B1D892E8C00BB3A1D /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFEF0A1D892E8C00BB3A1D /* Fetcher.swift */; };
 		70EFEF0E1D89326400BB3A1D /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFEF0D1D89326400BB3A1D /* Cache.swift */; };
+		70EFEF191D89431800BB3A1D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EFEF181D89431800BB3A1D /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		70EFEF081D8912F500BB3A1D /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		70EFEF0A1D892E8C00BB3A1D /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		70EFEF0D1D89326400BB3A1D /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		70EFEF181D89431800BB3A1D /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +81,6 @@
 			children = (
 				70EFEF0C1D89323F00BB3A1D /* HTTP */,
 				70EFEF071D8912D100BB3A1D /* Models */,
-				70EFEF061D8912C900BB3A1D /* HTTP */,
 				70EFEEEF1D89128A00BB3A1D /* HackerServiceSwift.h */,
 				70EFEEF11D89128A00BB3A1D /* Info.plist */,
 			);
@@ -95,17 +96,11 @@
 			path = HackerServiceSwiftTests;
 			sourceTree = "<group>";
 		};
-		70EFEF061D8912C900BB3A1D /* HTTP */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = HTTP;
-			sourceTree = "<group>";
-		};
 		70EFEF071D8912D100BB3A1D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				70EFEF081D8912F500BB3A1D /* Post.swift */,
+				70EFEF181D89431800BB3A1D /* Comment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -230,6 +225,7 @@
 				70EFEF091D8912F500BB3A1D /* Post.swift in Sources */,
 				70EFEF0E1D89326400BB3A1D /* Cache.swift in Sources */,
 				70EFEF0B1D892E8C00BB3A1D /* Fetcher.swift in Sources */,
+				70EFEF191D89431800BB3A1D /* Comment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
