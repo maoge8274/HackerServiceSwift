@@ -11,11 +11,15 @@ import Foundation
 private let _Fetcher:Fetcher = Fetcher()
 
 
-public class Fetcher {
+open class Fetcher {
     let baseURL = "https://news.ycombinator.com/"
     let APIURL = "https://hacker-news.firebaseio.com/v0/"
     let APIFormat = ".json"
-    private let session = NSURLSession.sharedSession()
+    fileprivate let session = URLSession.shared
+    
+    public typealias FetchCompletion = (_ object:AnyObject?,_ error:ResponseError?,_ local:Bool) -> Void
+    public typealias FetchParsing = (_ html:String?) -> AnyObject
+    public typealias FetchParsingAPI = (_ json:AnyObject?) -> AnyObject!
     
     public enum ResponseError:String{
         case NoConnection = "You are not connected to the internet"
@@ -28,15 +32,15 @@ public class Fetcher {
         case User = "user/"
     }
     
-    public class var sharedInstance:Fetcher {
+    open class var sharedInstance:Fetcher {
         return _Fetcher
     }
     
-    class func Fetch(ressource:String){
+    class func Fetch(_ ressource:String,parsing:FetchParsing,completion:FetchCompletion){
         
     }
     
-    class func FetchJSON(endpoint:APIEndpoint,ressource:String?){
+    class func FetchJSON(_ endpoint:APIEndpoint,ressource:String?){
         
     }
     

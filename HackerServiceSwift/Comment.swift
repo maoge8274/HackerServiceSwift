@@ -9,6 +9,6 @@
 import Foundation
 
 
-public class Comment: NSObject {
+open class Comment: NSObject {
     
 }

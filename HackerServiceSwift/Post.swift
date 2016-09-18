@@ -8,21 +8,21 @@
 
 import Foundation
 
-public class Post: NSObject, NSCoding {
-    public var id: Int?
-    public var title: String?
+open class Post: NSObject, NSCoding {
+    open var id: Int?
+    open var title: String?
 
-    public var domain: String? {
+    open var domain: String? {
         get {
             return ""
         }
     }
-    public var points:Int = 0
-    public var commentsCount:Int = 0
-    public var postId:String?
-    public var prettyTime:String?
-    public var upvoteURL:String?
-    public var type:PostFilter?
+    open var points:Int = 0
+    open var commentsCount:Int = 0
+    open var postId:String?
+    open var prettyTime:String?
+    open var upvoteURL:String?
+    open var type:PostFilter?
 
     public enum PostFilter: String {
         case Top = ""
@@ -48,8 +48,28 @@ public class Post: NSObject, NSCoding {
         super.init()
     }
 
-    public func encodeWithCoder(aCoder: NSCoder) {
+    open func encode(with aCoder: NSCoder) {
 //        for key in 
     }
 
 }
+
+
+public extension Post{
+    
+    public typealias Response = (_ posts:[Post]?,_ error:Fetcher.ResponseError?,_ local:Bool) -> Void
+    
+    public class func fetch(_ filter:PostFilter,page:Int,completion:Response){
+//        Fetcher.Fetch(<#T##ressource: String##String#>)
+    }
+    
+    
+    public class func fetch(_ filter:PostFilter,completion:Response){
+        fetch(filter,page:1,completion:completion)
+    }
+    
+}
+
+
+
+

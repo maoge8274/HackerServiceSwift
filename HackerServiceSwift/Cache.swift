@@ -11,21 +11,21 @@ import Foundation
 private let _Cache = Cache()
 
 
-public class Cache{
+open class Cache{
     init(){
         
     }
-    public class var sharedCache:Cache{
+    open class var sharedCache:Cache{
         return _Cache
     }
 }
 
-public class DiskCache:Cache{
+open class DiskCache:Cache{
     
 }
 
-public class MemoryCache:Cache{
-    private var memoryCache = NSCache()
+open class MemoryCache:Cache{
+    fileprivate var memoryCache = NSCache()
     
     override init() {
         
